@@ -47,8 +47,8 @@ const getRecipe =async (req,res)=> {
 }
 const createRecipe = async (req, res) => {
   try {
-    const { title, description, preparation } = req.body;
-    const recipe = await Recipe.create({ title, description, preparation });
+    const { title,url,filename, description, preparation } = req.body;
+    const recipe = await Recipe.create({ title, url,filename,description, preparation });
 
     res.json({
       msg: `user with id ${recipe.id}`,
