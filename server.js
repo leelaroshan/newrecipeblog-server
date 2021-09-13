@@ -15,7 +15,7 @@ connectDB();
 
 server.use(express.json())
 
-server.get('/', (req, res) => res.send('Welcome to Node with Postgres!'));
+server.get('/', (req, res) => res.send('Welcome to Recipe blog with MERN stack!'));
 server.use('/recipes', recipes);
 
 
