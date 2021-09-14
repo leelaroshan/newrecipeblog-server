@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 
-server.use(express.json())
+server.use(express.json());
+app.use(cors());
 
 server.get('/', (req, res) => res.send('Welcome to Recipe blog with MERN stack!'));
 server.use('/recipes', recipes);
